@@ -1,25 +1,30 @@
 {
-  "name": "ckeditor-plugin",
-  "version": "0.2.0",
-  "description": "CKEditor Plugin for FREME",
+  "name": "tinymce-freme",
+  "version": "0.0.1",
+  "description": "TinyMCE Plugin for FREME",
   "main": "createTemplates.js",
   "scripts": {
     "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freme-project/CKEditor-Plugin.git"
+    "url": "git+https://github.com/vergissberlin/tinymce-freme.git"
   },
   "keywords": [
-    "FREME"
+    "FREME",
+    "TineMCE"
   ],
-  "author": "Ben De Meester",
+  "author": "André Lademann <vergissberlin@gmail.com>",
   "bugs": {
-    "url": "https://github.com/freme-project/CKEditor-Plugin/issues"
+    "url": "https://github.com/vergissberlin/tinymce-freme/issues"
   },
-  "homepage": "https://github.com/freme-project/CKEditor-Plugin#readme",
+  "homepage": "https://github.com/vergissberlin/tinymce#readme",
+  "license": "Apache-2.0",
   "dependencies": {
     "async": "^1.5.2",
     "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2"
   }
 }
