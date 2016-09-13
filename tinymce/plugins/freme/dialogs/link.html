@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Link</title>
+	<link rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css"
+		  integrity="sha256-X/mlyZAafJ8j5e74pWh4+qNUD1zurCvLA6hODVobQX0=" crossorigin="anonymous"/>
+
 </head>
 <body>
-Contextual links dialog (in progress)
+<div class="container">
+	<h4>Contextual links<br>
+		<small>(in progress)</small>
+	</h4>
+	Content: <input id="content">
+	<button onclick="top.tinymce.activeEditor.windowManager.getWindows()[0].close();">Close window</button>
+</div>
 </body>
 </html>

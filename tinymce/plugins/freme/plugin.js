@@ -6,17 +6,28 @@ tinymce.PluginManager.add('freme', function (editor, url) {
 		// @todo change this to tinyMCE url
 		image:   '../plugins/freme/icons/fremeLink.png',
 		tooltip: 'Add contextual links',
+
+
 		onclick: function () {
 			// Open window
 			editor.windowManager.open({
-				title:    'Detect concepts',
+				title:   'Detect concepts',
 				// @todo change this to tinyMCE url
-				url:      '../plugins/freme/dialogs/link.html',
-				width:    300,
-				height:   200,
-				onsubmit: function (e) {
-					// @todo Insert content when the window form is submitted
-					editor.insertContent('Title: ' + e.data.contextualData);
+				url:     '../plugins/freme/dialogs/link.html',
+				width:   300,
+				height:  200,
+				onclick: function () {
+					// Open window
+					editor.windowManager.open({
+						title:    'Example plugin',
+						body:     [
+							{type: 'textbox', name: 'title', label: 'Title'}
+						],
+						onsubmit: function (e) {
+							// @todo Insert content when the window form is submitted
+							editor.insertContent('Title: ' + e.data.contextualData);
+						}
+					});
 				}
 			});
 		}
