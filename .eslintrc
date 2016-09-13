@@ -6,7 +6,7 @@
   "globals": {
     "escape": true,
     "unescape": true,
-    "Uint8Array": true
+    "tinymce": true
   },
   "rules": {
     "camelcase": 0,
@@ -85,7 +85,7 @@
     "no-multiple-empty-lines": [
       1,
       {
-        max: 2
+        "max": 2
       }
     ],
     "object-curly-spacing": [
@@ -116,7 +116,7 @@
     "no-implied-eval": 2,
     "no-loop-func": 2,
     "no-multi-str": 2,
-    "no-multi-spaces": 2,
+    "no-multi-spaces": 0,
     "no-sequences": 2,
     "no-new": 2,
     "no-caller": 2

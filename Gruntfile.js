@@ -28,7 +28,9 @@ module.exports = function (grunt) {
 
 			templates: ['createTemplates.js'],
 
-			plugin: ['tinymce/plugins/*/plugin.js']
+			plugin: ['tinymce/plugins/*/plugin.js'],
+
+			languages: ['tinymce/plugins/*/langs/*.js']
 
 		},
 
@@ -41,8 +43,17 @@ module.exports = function (grunt) {
 				}
 			},
 
-			plugins: {
-				src:    ['js/tinymce/plugins/*/plugin.js'],
+			languages: {
+				src:    [
+					'js/tinymce/plugins/*/langs/*.js'
+				],
+				expand: true,
+				ext:    '.min.js'
+			},
+			plugins:   {
+				src:    [
+					'js/tinymce/plugins/*/plugin.js'
+				],
 				expand: true,
 				ext:    '.min.js'
 			}
@@ -50,13 +61,16 @@ module.exports = function (grunt) {
 		},
 
 		watch: {
-			files: './tinymce/plugins/**/*.js',
-			tasks: ['uglify']
+			files: [
+				'Gruntfile.js',
+				'createTemplates.js',
+				'./tinymce/plugins/**/*.js'
+			],
+			tasks: ['eslint', 'uglify']
 		}
 	});
 
 	require('load-grunt-tasks')(grunt);
-	grunt.loadTasks('tools/tasks');
 	grunt.registerTask('lint', ['eslint']);
 	grunt.registerTask('test', ['eslint']);
 	grunt.registerTask('default', ['lint', 'browserSync']);

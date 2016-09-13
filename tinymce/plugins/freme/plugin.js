@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: "off" */
 tinymce.PluginManager.requireLangPack('freme', 'de_DE');
 tinymce.PluginManager.add('freme', function (editor, url) {
 	// Add a button that opens a window
@@ -6,7 +7,6 @@ tinymce.PluginManager.add('freme', function (editor, url) {
 		// @todo change this to tinyMCE url
 		image:   '../plugins/freme/icons/fremeLink.png',
 		tooltip: 'Add contextual links',
-
 
 		onclick: function () {
 			// Open window
