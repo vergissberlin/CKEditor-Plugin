@@ -11,9 +11,9 @@ Lints, minified, unit tests and creates release packages for TinyMCE.
 `grunt lint`
 Runs all source files though various JS linters.
 
-
-`grunt watch`
-Watches for source code changes and triggers rebuilds and linting.
+`grunt dev`
+For development. Watches for source code changes and triggers rebuilds 
+and linting an reload the connected browsers.
 
 `grunt --help`
 Displays the various build tasks.

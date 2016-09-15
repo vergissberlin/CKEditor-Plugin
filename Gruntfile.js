@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 			options: {
 				server:    {
 					baseDir:   './',
-					watchTask: true
+					watchTask: false
 				},
 				startPath: 'tinymce/samples/basic.html'
 			}
@@ -50,6 +50,7 @@ module.exports = function (grunt) {
 				expand: true,
 				ext:    '.min.js'
 			},
+
 			plugins:   {
 				src:    [
 					'js/tinymce/plugins/*/plugin.js'
@@ -61,17 +62,21 @@ module.exports = function (grunt) {
 		},
 
 		watch: {
+
 			files: [
 				'Gruntfile.js',
 				'createTemplates.js',
 				'./tinymce/plugins/**/*.js'
 			],
+
 			tasks: ['eslint', 'uglify']
+
 		}
 	});
 
 	require('load-grunt-tasks')(grunt);
 	grunt.registerTask('lint', ['eslint']);
 	grunt.registerTask('test', ['eslint']);
+	grunt.registerTask('dev', ['eslint', 'browserSync', 'watch']);
 	grunt.registerTask('default', ['lint', 'browserSync']);
 };

@@ -1,20 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Link</title>
+	<meta charset="UTF-8">
+	<title>Link</title>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic"
+		  rel="stylesheet" type="text/css">
 	<link rel="stylesheet"
 		  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css"
 		  integrity="sha256-X/mlyZAafJ8j5e74pWh4+qNUD1zurCvLA6hODVobQX0=" crossorigin="anonymous"/>
-
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+			integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"
+			integrity="sha256-ZXg72BEfPkGcWiAualdfLU4jSEj7sabDa40wc+V9RKg=" crossorigin="anonymous"></script>
+	<script type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"
+			integrity="sha256-GYcdwXot2kSaBb8kr9o8zDKYBwQ1PCkugjcCYFQS+IA=" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
-	<h4>Contextual links<br>
-		<small>(in progress)</small>
-	</h4>
-	Content: <input id="content">
-	<button onclick="top.tinymce.activeEditor.windowManager.getWindows()[0].close();">Close window</button>
+	<form>
+		<div class="form-group">
+			<label class="cke_dialog_ui_labeled_label" id="cke_72_label" for="cke_71_select">
+				Language of the text
+			</label>
+			<select id="cke_71_select"
+					class="form-control"
+					aria-labelledby="cke_72_label">
+				<option value="NL"> Dutch</option>
+				<option value="EN"> English</option>
+				<option value="FR"> French</option>
+				<option value="DE"> German</option>
+				<option value="IT"> Italian</option>
+				<option value="ES"> Spanish</option>
+				<option value="RU"> Russian</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label class="cke_dialog_ui_labeled_label" id="cke_75_label" for="cke_74_select">
+				What are you looking for?
+			</label>
+			<select id="cke_74_select"
+					class="form-control"
+					aria-labelledby="cke_75_label">
+				<option value="dbpedia"> General information from Wikipedia</option>
+				<option value="geopolitical"> Country information</option>
+				<option value="viaf"> Information about authors, artists, etc.</option>
+				<option value="orcid"> Information on scientific researchers</option>
+				<option value="europeana"> Cultural information</option>
+			</select>
+		</div>
+
+		<div class="alert alert-info alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			<h4>Heads up!</h4>
+			<p>
+				The FAO geopolitical ontology and relate services
+				have been developed to facilitate data exchange and sharing in a standardized manner among systems
+				managing information about countries and/or regions.<br>The geopolitical ontology ensures that FAO
+				and associated partners can rely on a master reference for geopolitical information, as it manages
+				names in multiple languages (English, French, Spanish, Arabic, Chinese, Russian and Italian); maps
+				standard coding systems (UN, ISO, FAOSTAT, AGROVOC, etc); provides relations among territories (land
+				borders, group membership, etc); and tracks historical changes.
+			</p>
+			<p>
+				See <a href="http://www.fao.org/countryprofiles/geoinfo/en/">here</a> for more information.
+			</p>
+		</div>
+
+		<button onclick="top.tinymce.activeEditor.windowManager.getWindows()[0].close();" class="btn btn-danger">Close
+			window
+		</button>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
 </div>
 </body>
 </html>

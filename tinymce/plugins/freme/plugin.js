@@ -14,31 +14,11 @@ tinymce.PluginManager.add('freme', function (editor, url) {
 				title:   'Detect concepts',
 				// @todo change this to tinyMCE url
 				url:     '../plugins/freme/dialogs/link.html',
-				width:   300,
-				height:  200,
+				width:   550,
+				height:  400,
 				onclick: function () {
-					// Open window
-					editor.windowManager.open({
-						title:    'Example plugin',
-						body:     [
-							{type: 'textbox', name: 'title', label: 'Title'}
-						],
-						onsubmit: function (e) {
-							// @todo Insert content when the window form is submitted
-							editor.insertContent('Title: ' + e.data.contextualData);
-						}
-					});
 				}
 			});
-		}
-	});
-
-	// Adds a menu item to the tools menu
-	editor.addMenuItem('freme', {
-		text:    'Detect concepts',
-		context: 'tools',
-		onclick: function () {
-			// @todo Implement the request
 		}
 	});
 });
